@@ -2,6 +2,7 @@ from sqlalchemy import create_engine, Column, Integer, String, Float, Date, Time
 from sqlalchemy.orm import declarative_base, sessionmaker, relationship
 from datetime import datetime
 import os
+from .database import init_db, save_visit, get_all_store_names, get_last_visit
 
 # --- Configuration ---
 # Default to SQLite for local development. 
