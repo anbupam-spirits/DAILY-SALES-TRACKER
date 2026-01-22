@@ -184,10 +184,13 @@ final_photo = cam or upl
 st.markdown("### 📍 LOCATION")
 location = streamlit_geolocation()
 
-if location and location.get("latitude"):
+if isinstance(location, dict) and location.get("latitude") is not None:
     st.session_state.loc_lat = location["latitude"]
     st.session_state.loc_lon = location["longitude"]
     st.session_state.loc_acc = location.get("accuracy", 0)
+else:
+    st.warning("📍 Location not available. Please allow GPS permission in your browser.")
+
 
 if st.session_state.loc_lat:
     map_link = f"https://www.google.com/maps?q={st.session_state.loc_lat},{st.session_state.loc_lon}"
