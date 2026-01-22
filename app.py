@@ -12,7 +12,8 @@ import streamlit.components.v1 as components
 from streamlit_js_eval import streamlit_js_eval
 from streamlit_geolocation import streamlit_geolocation
 from database import init_db, save_visit, get_all_store_names, get_last_visit_by_store, update_lead_status
-from login_manager import require_auth, logout
+from .login_manager import require_auth, logout
+
 
 # --- Authentication ---
 require_auth()
