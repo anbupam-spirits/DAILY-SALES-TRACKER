@@ -1,0 +1,8 @@
+streamlit==1.41.1
+pandas
+gspread
+oauth2client
+Pillow
+streamlit-js-eval
+requests
+SQLAlchemy
