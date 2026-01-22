@@ -17,7 +17,8 @@ import os
 # Database Configuration
 # -------------------------------------------------------------------
 
-DATABASE_URL = os.getenv("DATABASE_URL", "sqlite:///field_sales.db")
+DB_PATH = os.path.join(os.path.expanduser("~"), "field_sales.db")
+DATABASE_URL = os.getenv("DATABASE_URL", f"sqlite:///{DB_PATH}")
 
 Base = declarative_base()
 
