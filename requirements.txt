@@ -4,5 +4,6 @@ gspread
 oauth2client
 Pillow
 streamlit-js-eval
+streamlit-geolocation
 requests
 SQLAlchemy
